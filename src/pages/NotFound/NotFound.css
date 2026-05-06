@@ -1,0 +1,204 @@
+.notfound-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+/*  Floating orbs 
+   Three blurred circles that slowly drift around the background.
+   pointer-events: none ensures they never block clicks. */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  animation: drift linear infinite;
+  opacity: 0.18;
+}
+
+.orb-1 {
+  width: 400px;
+  height: 400px;
+  background: #e53e3e;
+  top: -100px;
+  left: -100px;
+  animation-duration: 18s;
+}
+
+.orb-2 {
+  width: 300px;
+  height: 300px;
+  background: #1d4ed8;
+  bottom: -80px;
+  right: -80px;
+  animation-duration: 22s;
+  animation-delay: -8s;
+}
+
+.orb-3 {
+  width: 200px;
+  height: 200px;
+  background: #f59e0b;
+  top: 50%;
+  left: 60%;
+  animation-duration: 15s;
+  animation-delay: -4s;
+}
+
+/* Orbs drift in a slow figure-eight-like path */
+@keyframes drift {
+  0%   { transform: translate(0px,   0px)   scale(1);    }
+  25%  { transform: translate(30px,  -20px) scale(1.05); }
+  50%  { transform: translate(-20px, 30px)  scale(0.95); }
+  75%  { transform: translate(20px,  20px)  scale(1.02); }
+  100% { transform: translate(0px,   0px)   scale(1);    }
+}
+
+/* Main content  */
+.notfound-content {
+  position: relative;  /* sits above the orbs (z-index stacking) */
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+}
+
+/* Glitch effect 
+   The glitch uses three layers:
+   - The real <h1> text (white)
+   - ::before pseudo-element shifted left  with a red tint, clipped randomly
+   - ::after  pseudo-element shifted right with a blue tint, clipped randomly
+   Both pseudo-elements animate with different timings to create the offset effect. */
+.glitch {
+  font-size: clamp(6rem, 20vw, 10rem);
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -4px;
+  margin: 0;
+  position: relative;
+  line-height: 1;
+  text-shadow: 0 0 40px rgba(229, 62, 62, 0.4);
+
+  /* data-text attribute value is used by both pseudo-elements */
+}
+
+/* Both pseudo-elements share the same text content via data-text */
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);  /* reads the data-text="404" attribute */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+}
+
+/* Red layer — shifts left, uses clip-path to show only a horizontal slice */
+.glitch::before {
+  color: #e53e3e;
+  animation: glitch-red 3.5s infinite;
+  opacity: 0.8;
+}
+
+/* Blue layer — shifts right with opposite timing */
+.glitch::after {
+  color: #60a5fa;
+  animation: glitch-blue 3.5s infinite;
+  opacity: 0.8;
+}
+
+/* Red channel — randomly clips and shifts horizontally */
+@keyframes glitch-red {
+  0%,  90%, 100% { transform: translate(0);        clip-path: inset(0 0 100% 0); }
+  91%            { transform: translate(-4px, 2px); clip-path: inset(10% 0 60% 0); }
+  92%            { transform: translate(4px, -2px); clip-path: inset(50% 0 20% 0); }
+  93%            { transform: translate(-2px, 1px); clip-path: inset(70% 0 10% 0); }
+  94%            { transform: translate(3px, -1px); clip-path: inset(30% 0 50% 0); }
+  95%            { transform: translate(0);         clip-path: inset(0 0 100% 0); }
+}
+
+/* Blue channel — opposite shift direction for the split-RGB look */
+@keyframes glitch-blue {
+  0%,  88%, 100% { transform: translate(0);        clip-path: inset(0 0 100% 0); }
+  89%            { transform: translate(4px, -2px); clip-path: inset(20% 0 55% 0); }
+  90%            { transform: translate(-3px, 2px); clip-path: inset(60% 0 15% 0); }
+  91%            { transform: translate(2px, -1px); clip-path: inset(40% 0 35% 0); }
+  92%            { transform: translate(-4px, 1px); clip-path: inset(5%  0 80% 0); }
+  93%            { transform: translate(0);         clip-path: inset(0 0 100% 0); }
+}
+
+/* Divider */
+.notfound-divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #e53e3e, #f59e0b);
+  border-radius: 2px;
+  margin: 12px auto 24px;
+}
+
+
+.notfound-title {
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-weight: 700;
+  color: #f1f1f1;
+  margin: 0 0 12px;
+  letter-spacing: 0.5px;
+}
+
+.notfound-message {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.8;
+  margin: 0 0 36px;
+  max-width: 360px;
+}
+
+
+.notfound-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.notfound-btn {
+  padding: 0.7rem 1.8rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  border: none;
+}
+
+.notfound-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.notfound-btn.primary {
+  background: linear-gradient(135deg, #e53e3e, #c53030);
+  color: #fff;
+}
+
+.notfound-btn.secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f1f1f1;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .notfound-actions { flex-direction: column; width: 100%; }
+  .notfound-btn     { width: 100%; text-align: center; }
+}

@@ -1,0 +1,6 @@
+<svg width="120" height="120" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Star outline -->
+  <polygon points="50,15 61,38 85,38 66,54 73,78 50,64 27,78 34,54 15,38 39,38" fill="none" stroke="gold" stroke-width="4" stroke-linejoin="round"></polygon>
+
+</svg>

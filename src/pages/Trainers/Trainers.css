@@ -1,0 +1,264 @@
+.trainers {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #0a1f44, #0d2a66);
+  color: #eaf2ff;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.trainers-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: -2.5rem;
+}
+
+.trainers-header h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ffffff, #fdd20f);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.trainers-header p {
+  color: #b8c9ff;
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* GRID: 3 cards in a row with 2rem gap */
+.trainers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Individual Trainer Card */
+.trainer-card {
+  position: relative;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border-radius: 18px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #022d83, #0a1f44);
+  box-shadow:
+    inset 6px 6px 14px rgba(0, 0, 0, 0.6),
+    inset -6px -6px 14px rgba(255, 255, 255, 0.06),
+    0 20px 40px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  opacity: 0;
+  transform: translateY(40px) scale(0.96);
+  transition: all 0.7s ease;
+}
+
+.trainer-card::before {
+  content: "";
+  position: absolute; 
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.18),
+    rgba(255, 255, 255, 0.02)
+  );
+  pointer-events: none;
+}
+
+.trainer-card.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.trainer-card img {
+  width: 125px;
+  height: 125px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.trainer-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+  background: linear-gradient(90deg, #ffffff, #fdd20f);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.trainer-card span {
+  font-size: 1rem;
+  color: #7fb2ff;
+}
+
+.trainer-card p {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #d6e2ff;
+  line-height: 1.6;
+}
+
+/* Popular card highlight */
+.trainer-card.popular {
+  box-shadow:
+    inset 6px 6px 14px rgba(0, 0, 0, 0.7),
+    inset -6px -6px 14px rgba(255, 255, 255, 0.1),
+    0 0 40px rgba(90, 160, 255, 0.75);
+  border: 1px solid rgba(120, 180, 255, 0.4);
+}
+
+/* Button styling */
+.trainer-btn {
+  margin-top: 1.2rem;
+  padding: 0.6rem 1.2rem;
+  background: #f57c00; /* orange */
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.trainer-btn:hover {
+  background: #ff9800;
+}
+
+/* Social icons */
+.trainer-socials {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.trainer-socials a {
+  color: #2196f3; /* blue */
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+
+.trainer-socials a:hover {
+  color: #64b5f6;
+}
+
+.booking-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.booking-content {
+  background: #0d2a66;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 350px;
+  color: white;
+}
+
+.booking-content input,
+.booking-content textarea {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: none;
+}
+
+.booking-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.bookolo {
+  background: #022d83;
+  color: #eaf2ff;
+}
+.book {
+  background: #022d83;
+  color: #eaf2ff;
+}
+
+.confirm {
+  background: #f57c00;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+}
+
+
+.success-popup {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background: linear-gradient(135deg, #ff7a00, #ff9f1c);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  z-index: 2000;
+
+  opacity: 0;
+  animation: popupFade 0.4s ease forwards;
+}
+
+@keyframes popupFade {
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .trainers-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .trainers-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .trainers-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .trainer-card img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .trainer-card h3 {
+    font-size: 1.15rem;
+  }
+
+  .trainer-card p {
+    font-size: 0.85rem;
+  }
+}

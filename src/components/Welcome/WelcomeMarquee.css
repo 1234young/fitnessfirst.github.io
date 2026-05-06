@@ -1,0 +1,65 @@
+.welcome-marquee {
+  width: 100%;
+  overflow: hidden;
+  padding: 1rem 0;
+  background: linear-gradient(90deg, #1e2bff, #3a4bff);
+  position: relative;
+  top: 60px; position: sticky; z-index: 1000;
+   margin-bottom: 0.5rem;
+}
+
+.welcome-track {
+  display: flex;
+  width: max-content;
+  gap: 3rem;
+  animation: welcome-scroll 20s linear infinite;
+  white-space: nowrap;
+}
+
+.welcome-track span {
+  font-size: 1rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.welcome-marquee::before,
+.welcome-marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+}
+
+.welcome-marquee::before {
+  left: 0;
+  background: linear-gradient(to right, #0a2cff, transparent);
+}
+
+.welcome-marquee::after {
+  right: 0;
+  background: linear-gradient(to left, #0a2cff, transparent);
+}
+
+
+@keyframes welcome-scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-track span {
+    font-size: 1rem;
+    letter-spacing: 0.15em;
+  }
+ 
+}
+

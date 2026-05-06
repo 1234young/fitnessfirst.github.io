@@ -1,0 +1,209 @@
+.progress-page {
+  min-height: 100vh;
+  padding: 40px 16px;
+  background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+}
+
+.progress-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Header */
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.progress-header h1 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.back-btn {
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 8px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.back-btn:hover { background: rgba(255,255,255,0.15); }
+
+/* Stat cards row */
+.stat-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.stat-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.stat-number {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #f5a623;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #aaaacc;
+  text-align: center;
+}
+
+/* Shared card style */
+.progress-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.progress-card h3 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin: 0 0 20px;
+}
+
+/* Bar chart */
+.bar-chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 120px;
+  gap: 8px;
+}
+
+.bar-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  gap: 4px;
+}
+
+.bar-count {
+  font-size: 0.75rem;
+  color: #f5a623;
+  font-weight: 600;
+  height: 16px;
+}
+
+.bar-wrapper {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.bar {
+  width: 100%;
+  background: rgba(255,255,255,0.1);
+  border-radius: 4px 4px 0 0;
+  min-height: 4px;
+  transition: height 0.4s ease;
+}
+
+/* Active bar — has workouts */
+.bar.active {
+  background: linear-gradient(180deg, #f5a623, #e09410);
+}
+
+.bar-label {
+  font-size: 0.75rem;
+  color: #aaaacc;
+}
+
+/* History list */
+.history-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.07);
+}
+
+.history-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.history-icon { font-size: 1.2rem; }
+
+.history-name {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.history-category {
+  color: #aaaacc;
+  font-size: 0.78rem;
+  margin: 2px 0 0;
+}
+
+.history-date {
+  color: #f5a623;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.no-history {
+  color: #aaaacc;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Loading / error */
+.progress-loading,
+.progress-error {
+  color: #aaaacc;
+  text-align: center;
+  padding: 60px 0;
+  font-size: 1rem;
+}
+.nav-avatar-icon {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .stat-cards { grid-template-columns: repeat(3, 1fr); }
+  .stat-number { font-size: 1.6rem; }
+}

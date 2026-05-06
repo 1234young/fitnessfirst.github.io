@@ -1,0 +1,32 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Progress Ring -->
+  <circle cx="100" cy="100" r="85" stroke="#E5E7EB" stroke-width="12"></circle>
+  <circle cx="100" cy="100" r="85" stroke="#3B82F6" stroke-width="12" stroke-dasharray="400" stroke-dashoffset="120" stroke-linecap="round" transform="rotate(-90 100 100)"></circle>
+
+  <!-- Clipboard -->
+  <rect x="55" y="40" width="90" height="110" rx="10" fill="white" stroke="#1F2937" stroke-width="3"></rect>
+  
+  <!-- Clipboard Top -->
+  <rect x="75" y="25" width="50" height="25" rx="8" fill="#3B82F6"></rect>
+
+  <!-- Checklist -->
+  <circle cx="75" cy="75" r="5" fill="#22C55E"></circle>
+  <circle cx="75" cy="95" r="5" fill="#22C55E"></circle>
+  <circle cx="75" cy="115" r="5" fill="#22C55E"></circle>
+
+  <line x1="85" y1="75" x2="130" y2="75" stroke="#6B7280" stroke-width="3"></line>
+  <line x1="85" y1="95" x2="130" y2="95" stroke="#6B7280" stroke-width="3"></line>
+  <line x1="85" y1="115" x2="130" y2="115" stroke="#6B7280" stroke-width="3"></line>
+
+  <!-- Bar Chart -->
+  <rect x="85" y="125" width="8" height="10" fill="#F97316"></rect>
+  <rect x="98" y="120" width="8" height="15" fill="#FACC15"></rect>
+  <rect x="111" y="110" width="8" height="25" fill="#3B82F6"></rect>
+
+  <!-- Dumbbell -->
+  <rect x="75" y="155" width="50" height="6" rx="3" fill="#1F2937"></rect>
+  <rect x="70" y="150" width="8" height="16" rx="2" fill="#1F2937"></rect>
+  <rect x="122" y="150" width="8" height="16" rx="2" fill="#1F2937"></rect>
+
+</svg>

@@ -1,0 +1,124 @@
+.faq-section {
+  padding: 80px 24px;
+  background: linear-gradient(180deg, #0a0a1a 0%, #111827 100%);
+  
+}
+
+/* Header */
+.faq-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.faq-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+  background: linear-gradient(45deg, #ffffff 0%, #ffa500 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin-top: -2rem;
+}
+
+.faq-subtitle {
+  font-size: 1rem;
+  color: #aaaacc;
+  max-width: 440px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* FAQ list — centered, max width for readability */
+.faq-list {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Single FAQ item */
+.faq-item {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  overflow: hidden; /* needed for max-height animation */
+}
+
+.faq-item:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(245, 166, 35, 0.3);
+}
+
+/* Open state — orange border highlight */
+.faq-item.open {
+  border-color: rgba(245, 166, 35, 0.5);
+  background: rgba(245, 166, 35, 0.05);
+}
+
+/* Question row */
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  gap: 16px;
+}
+
+.faq-q-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.4;
+}
+
+/* Arrow — rotates 90deg when open */
+.faq-arrow {
+  font-size: 1.4rem;
+  color: #f5a623;
+  font-weight: 700;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+  display: inline-block;
+  transform: rotate(0deg);
+}
+
+.faq-arrow.rotated {
+  transform: rotate(90deg);
+}
+
+/* Answer — hidden by default, slides open */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  padding: 0 24px;
+}
+
+.faq-answer.visible {
+  max-height: 300px; /* large enough for any answer */
+  padding: 0 24px 20px;
+}
+
+.faq-answer p {
+  font-size: 0.92rem;
+  color: #aaaacc;
+  line-height: 1.8;
+  margin: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 16px;
+}
+
+/* Responsive */
+@media (max-width: 560px) {
+  .faq-header h2 { font-size: 1.6rem; }
+  .faq-question  { padding: 16px 18px; }
+  .faq-answer    { padding: 0 18px; }
+  .faq-answer.visible { padding: 0 18px 16px; }
+  .faq-q-text    { font-size: 0.92rem; }
+}

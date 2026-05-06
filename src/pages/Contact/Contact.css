@@ -1,0 +1,127 @@
+
+.contact-section {
+  min-height: 100vh;
+  padding: 4.5em 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent; 
+  margin-top: 0%;       
+  margin-bottom: 0.5rem;
+}
+
+/* GLASS CARD */
+.contact-glass {
+  width: 100%;
+  max-width: 520px;
+  padding: 2.5rem;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+
+  color: #ffffff;
+}
+
+
+.contact-glass h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  background: linear-gradient(90deg, #edeff0, #f8ac06);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  color: transparent;
+}
+
+.contact-glass p {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+}
+
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+.contact-form button {
+  margin-top: 0.5rem;
+  padding: 0.8rem;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+
+  background: linear-gradient(90deg, #1e90ff, #2723fc);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(30, 144, 255, 0.6);
+}
+.contact-status {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.contact-status.success {
+  color: #f7bf08;
+}
+
+.contact-status.error {
+  color: #f44336;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 3em 1rem;
+    margin-top: -200px;
+    margin-bottom: -200px;
+  }
+
+  .contact-glass {
+    padding: 2rem 1.5rem;
+    margin-top: 0%;
+    margin-bottom: 0%;
+  }
+
+  .contact-glass h2 {
+    font-size: 1.6rem;
+  }
+}

@@ -1,0 +1,19 @@
+<svg width="140" height="140" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Back person (slightly darker for depth) -->
+  <g fill="#1e40af" opacity="0.9">
+    <!-- Head -->
+    <circle cx="50" cy="40" r="9"></circle>
+    <!-- Body -->
+    <path d="M38 55 Q50 48 62 55 L65 80 Q50 90 35 80 Z"></path>
+  </g>
+
+  <!-- Front person -->
+  <g fill="#3b82f6">
+    <!-- Head -->
+    <circle cx="75" cy="45" r="10"></circle>
+    <!-- Body -->
+    <path d="M60 60 Q75 50 90 60 L94 90 Q75 105 56 90 Z"></path>
+  </g>
+
+</svg>

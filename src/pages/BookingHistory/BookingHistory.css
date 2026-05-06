@@ -1,0 +1,143 @@
+.bh-page {
+  min-height: 100vh;
+  padding: 6rem 1.5rem 3rem;
+  background: #0f0f0f;
+  color: #f1f1f1;
+}
+
+.bh-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.bh-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.bh-header h1 { font-size: 1.8rem; }
+
+.bh-back-btn {
+  background: transparent;
+  border: 1px solid #555;
+  color: #ccc;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+.bh-back-btn:hover { border-color: #e53e3e; color: #fff; }
+
+.bh-success {
+  background: #d1fae5;
+  color: #065f46;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.bh-empty {
+  text-align: center;
+  padding: 3rem;
+  color: #aaa;
+}
+
+.bh-book-btn {
+  margin-top: 1rem;
+  background: #e53e3e;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.bh-list { display: flex; flex-direction: column; gap: 1.2rem; }
+
+.bh-card {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+}
+
+.bh-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.bh-trainer { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.3rem; }
+.bh-date    { font-size: 0.85rem; color: #aaa; margin-bottom: 0.3rem; }
+.bh-message { font-size: 0.9rem; color: #ccc; }
+
+.bh-status {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.bh-card-actions { display: flex; gap: 0.75rem; }
+
+.bh-reschedule-btn {
+  background: #1d4ed8;
+  color: #fff;
+  border: none;
+  padding: 0.45rem 1rem;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.bh-reschedule-btn:hover { background: #1e40af; }
+
+.bh-cancel-btn {
+  background: transparent;
+  color: #e53e3e;
+  border: 1px solid #e53e3e;
+  padding: 0.45rem 1rem;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.bh-cancel-btn:hover { background: #e53e3e; color: #fff; }
+
+.bh-reschedule-form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 7px;
+  border: 1px solid #444;
+  background: #111;
+  color: #f1f1f1;
+  font-size: 0.9rem;
+  resize: vertical;
+  min-height: 80px;
+  margin-bottom: 0.75rem;
+}
+
+.bh-reschedule-actions { display: flex; gap: 0.75rem; }
+
+.bh-confirm-btn {
+  background: #10b981;
+  color: #fff;
+  border: none;
+  padding: 0.45rem 1rem;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+.bh-confirm-btn:hover { background: #059669; }
+
+.bh-loading, .bh-error { text-align: center; padding: 3rem; color: #aaa; }

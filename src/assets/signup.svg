@@ -1,0 +1,17 @@
+<svg width="120" height="120" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Paper outline -->
+  <rect x="20" y="15" width="60" height="70" fill="none" stroke="#f97316" stroke-width="4" rx="6"></rect>
+
+  <!-- Text lines -->
+  <line x1="30" y1="35" x2="70" y2="35" stroke="#f97316" stroke-width="3"></line>
+  <line x1="30" y1="50" x2="70" y2="50" stroke="#f97316" stroke-width="3"></line>
+  <line x1="30" y1="65" x2="55" y2="65" stroke="#f97316" stroke-width="3"></line>
+
+  <!-- Pencil -->
+  <line x1="55" y1="70" x2="75" y2="90" stroke="#f97316" stroke-width="4" stroke-linecap="round"></line>
+
+  <!-- Pencil tip -->
+  <polygon points="75,90 78,82 70,85" fill="#f97316"></polygon>
+
+</svg>

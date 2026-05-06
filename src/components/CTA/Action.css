@@ -1,0 +1,76 @@
+.cta {
+  padding: 5rem 8%;
+  background: linear-gradient(135deg, #0d47ff, #1a73ff, #2979ff);
+  text-align: center;
+  border-radius: 40px;
+  margin: 2rem 8%;
+  box-shadow: 0 30px 60px rgba(41, 121, 255, 0.4);
+}
+
+.cta-content h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.cta-content p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+}
+
+/* BUTTONS */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.cta-btn {
+  padding: 1rem 2.4rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+/* ORANGE PRIMARY */
+.cta-btn.primary {
+  background-color: #ff6f00;
+  color: #ffffff;
+}
+
+.cta-btn.primary:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(255, 111, 0, 0.45);
+}
+
+/* SECONDARY */
+.cta-btn.secondary {
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.cta-btn.secondary:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .cta {
+    margin: 4rem 5%;
+    padding: 4rem 6%;
+  }
+
+  .cta-content h2 {
+    font-size: 2.3rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+}
